@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: git pull
-    - name: Run a multi-line script
-      run: |
-        pm2 restart all,
-        echo test, and deploy your project.
+    # - name: Run a multi-line script
+    #   run: |
+    #     pm2 restart all,
+    #     echo test, and deploy your project.
