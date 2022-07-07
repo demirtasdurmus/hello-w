@@ -21,7 +21,7 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run git pull
-      run: git pull
+      run: git pull origin main
     - name: Run npm install
       run: npm install
     # - name: Run a multi-line script
