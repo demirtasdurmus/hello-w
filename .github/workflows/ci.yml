@@ -22,7 +22,7 @@ jobs:
       env:
           CI: true # shows terminal output!
 
-deploy:
+  deploy:
     runs-on: ubuntu-18.04
     if: github.ref == 'refs/heads/main' # we tell Github to only execute this step if we're on our master branch (so we don't put unfinished branches in production)
     steps:
