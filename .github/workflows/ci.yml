@@ -29,14 +29,13 @@ jobs:
       - name: Deploying the Hello World Project
         uses: appleboy/ssh-action@master # An action made to control Linux servers
         with: # We set all our secrets here for the action, these won't be shown in the action logs
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: 3222
+          host: '171.22.184.122'
+          username: 'root'
+          password: 'ZqSAbJGT5k4mhtLz'
+          port: '3222'
           script: |
             cd /var/www/hello # we move into our app's folder
             git pull # we pull any changes from git
             npm prune # we remove any unused dependencies
             npm install # we install any missing dependencies
-            npm run build # we build our app
             pm2 reload all # we reload the app via PM2
