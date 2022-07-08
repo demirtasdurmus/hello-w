@@ -30,9 +30,9 @@ jobs:
         uses: appleboy/ssh-action@master # An action made to control Linux servers
         with: # We set all our secrets here for the action, these won't be shown in the action logs
           host: ${{ secrets.HOST }}
-          username: 'root'
-          password: 'ZqSAbJGT5k4mhtLz'
-          port: '3222'
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           script: |
             cd /var/www/hello # we move into our app's folder
             git pull # we pull any changes from git
