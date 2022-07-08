@@ -29,7 +29,7 @@ jobs:
       - name: Deploying the Hello World Project
         uses: appleboy/ssh-action@master # An action made to control Linux servers
         with: # We set all our secrets here for the action, these won't be shown in the action logs
-          host: '171.22.184.122'
+          host: ${{ secrets.HOST }}
           username: 'root'
           password: 'ZqSAbJGT5k4mhtLz'
           port: '3222'
